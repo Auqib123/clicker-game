@@ -11,7 +11,6 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-process.env.MONGO_URI="mongodb+srv://auqib404:kseYWQqOEyXA9DLS@cluster0.mhqkh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 mongoose.connect(process.env.MONGO_URI||"mongodb://localhost:27017/clickerGame").then(() => console.log("MongoDB Connected"))
   .catch(err => console.error(err));
